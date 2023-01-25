@@ -62,6 +62,7 @@ export default {
   border-radius: 20px;
   display: flex;
   flex-direction: column;
+  word-break: break-all;
   &__visible {
     display: flex;
     justify-content: space-between;
