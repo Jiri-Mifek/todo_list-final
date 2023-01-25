@@ -66,9 +66,7 @@ export default createStore({
       }
     },
     uploadTask(state, { id }) {
-      let upload = state.tasks.find((x) => x.id === id).uploaded;
-      upload = !upload;
-      state.tasks.find((x) => x.id === id).uploaded = upload;
+      state.tasks.find((x) => x.id === id).uploaded = true;
       let tasksForUpload = [];
       tasksForUpload.push(state.tasks.find((task) => task.uploaded == true));
       localStorage.setItem("tasks", JSON.stringify(tasksForUpload));

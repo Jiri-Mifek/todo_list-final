@@ -9,11 +9,7 @@
         <h3 @click.self="showText(task.id)">{{ task.text }}</h3>
       </div>
       <div class="taskBox__visible__buttons" @click.self="showText(task.id)">
-        <i
-          @click="taskSave(task.id)"
-          v-if="!task.uploaded"
-          class="fas fa-cloud-arrow-up"
-        ></i>
+        <i @click="taskSave(task.id)" class="fas fa-cloud-arrow-up"></i>
         <i @click="taskComplete(task.id)" class="fas fa-check"></i>
         <i @click="taskDelete(task.id)" class="fas fa-times"></i>
       </div>
